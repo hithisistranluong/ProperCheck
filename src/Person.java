@@ -19,7 +19,10 @@ public class Person {
         this.contact = null;
     }
 
-    public Person(String id, String fullName, Date dob, String contact) {
+    public Person(String id, String fullName, String dobStr, String contact) throws ParseException {
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        Date dob = df.parse(dobStr);
+
         this.id = id;
         this.fullName = fullName;
         this.dob = dob;
@@ -66,7 +69,11 @@ public class Person {
     }
 
     public static void main(String[] args) throws Exception {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        Date date = sdf.parse("01/01/2000");
+        Owner owner = new Owner("O1", "Tran", "01/01/2000", "tran@example.com");
+        Property property = new Property("P1", "123 Street", 300, "available", owner);
+        Tenant tenant = new Tenant("T1", "Solash", "12/01/2000", "solash@example.com");
+        RentalAgreement r = new RentalAgreement("1", property, owner, null, tenant, "weekly", "01/01/2024", "12/31/2024", "01/01/2024", property.getPrice(), "new");
+
+        System.out.println(r.toString());
     }
 }

@@ -3,6 +3,7 @@
  */
 
 import java.util.*;
+import java.text.*;
 
 public class Tenant extends Person {
     private List<RentalAgreement> rentalAgreements;
@@ -17,8 +18,8 @@ public class Tenant extends Person {
         this.rentalProperties = new ArrayList<Property>();
     }
 
-    public Tenant(String id, String fullName, Date dob, String contact) {
-        super(id, fullName, dob, contact);
+    public Tenant(String id, String fullName, String dobStr, String contact) throws Exception {
+        super(id, fullName, dobStr, contact);
         this.rentalAgreements = new ArrayList<RentalAgreement>();
         this.paymentRecords = new ArrayList<Payment>();
         this.rentalProperties = new ArrayList<Property>();

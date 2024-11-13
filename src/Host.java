@@ -3,6 +3,7 @@
  */
 
 import java.util.*;
+import java.text.*;
 
 public class Host extends Person {
     private List<Property> managedProperties;
@@ -17,8 +18,8 @@ public class Host extends Person {
         this.rentalAgreements = new ArrayList<RentalAgreement>();
     }
 
-    public Host(String id, String fullName, Date dob, String contact) {
-        super(id, fullName, dob, contact);
+    public Host(String id, String fullName, String dobStr, String contact) throws ParseException {
+        super(id, fullName, dobStr, contact);
         this.managedProperties = new ArrayList<Property>();
         this.cooperatingOwners = new ArrayList<Person>();
         this.rentalAgreements = new ArrayList<RentalAgreement>();
