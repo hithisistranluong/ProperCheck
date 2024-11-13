@@ -58,18 +58,15 @@ public class Person {
     @Override
     public String toString() {
         return "Person {" + "\n" +
-                "\tId: " + id + "\n" +
-                "\tName: " + fullName + "\n" +
-                "\tDoB: " + dob + "\n" +
-                "\tContact: " + contact + " \n" +
+                "\tId: " + getId() + "\n" +
+                "\tName: " + getFullName() + "\n" +
+                "\tDoB: " + getDob() + "\n" +
+                "\tContact: " + getContact() + " \n" +
                 '}';
     }
 
     public static void main(String[] args) throws Exception {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
         Date date = sdf.parse("01/01/2000");
-        Person person = new Person("1", "tran", date, "123");
-        System.out.print(person.toString());
     }
 }
