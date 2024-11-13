@@ -45,4 +45,17 @@ public class Tenant extends Person {
 //    public void addRentalProperty(Property property) {
 //        rentalProperties.add(property);
 //    }
+
+    @Override
+    public String toString() {
+        return "Tenant {" + "\n" +
+                "\tId: " + getId() + "\n" +
+                "\tName: " + getFullName() + "\n" +
+                "\tDoB: " + getDob() + "\n" +
+                "\tContact: " + getContact() + " \n" +
+                "\tRental Agreements: " + getRentalAgreements() + "\n" +
+                "\tPayments: " + getPaymentTransactions() + "\n" +
+                "\tProperties: " + getRentalProperties() + "\n" +
+                "}";
+    }
 }

@@ -45,4 +45,17 @@ public class Host extends Person {
 //    public void addRentalAgreement(RentalAgreement agreement) {
 //        rentalAgreements.add(agreement);
 //    }
+
+    @Override
+    public String toString() {
+        return "Host {" + "\n" +
+                "\tId: " + getId() + "\n" +
+                "\tName: " + getFullName() + "\n" +
+                "\tDoB: " + getDob() + "\n" +
+                "\tContact: " + getContact() + " \n" +
+                "\tManagedProperties: " + getManagedProperties() + "\n" +
+                "\tCooperatingOwners: " + getCooperatingOwners() + "\n" +
+                "\tRentalAgreements: " + getRentalAgreements() + "\n" +
+                "}";
+    }
 }

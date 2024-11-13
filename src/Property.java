@@ -91,7 +91,8 @@ public class Property {
             result += "\tOwner: " + getOwner().fullName + " - id: " + getOwner().id + "\n";
         }
 
-        result += "\tHosts: " + getHosts() + "\n}";
+        result += "\tHosts: " + getHosts() + "\n" +
+                  "}";
 
         return result;
     }

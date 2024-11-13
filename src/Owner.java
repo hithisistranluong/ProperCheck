@@ -36,4 +36,17 @@ public class Owner extends Person {
     public List<RentalAgreement> getRentalAgreements() {
         return rentalAgreements;
     }
+
+    @Override
+    public String toString() {
+        return "Owner {" + "\n" +
+                "\tId: " + getId() + "\n" +
+                "\tName: " + getFullName() + "\n" +
+                "\tDoB: " + getDob() + "\n" +
+                "\tContact: " + getContact() + " \n" +
+                "\tOwnedProperties: " + getOwnedProperties() + "\n" +
+                "\tHosts: " + getHosts() + "\n" +
+                "\tRentalAgreements: " + getRentalAgreements() + "\n" +
+                "}";
+    }
 }

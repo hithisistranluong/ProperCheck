@@ -62,7 +62,7 @@ public class Person {
                 "\tName: " + getFullName() + "\n" +
                 "\tDoB: " + getDob() + "\n" +
                 "\tContact: " + getContact() + " \n" +
-                '}';
+                "}";
     }
 
     public static void main(String[] args) throws Exception {
